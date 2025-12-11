@@ -1,9 +1,11 @@
 // test file
-function v(x, c) {
-  const result = x + c;
-  const label = "ddd";
-}
+// function v(x, c) {
+//   const result = x + c;
+//   const label = "ddd";
+// }
 
 // Brief
-// 3. Set Up Development Tools: 
-// 3.3 Set up commit hooks to ensure staged code is checked before being committed. Format HTML files and format and lint JavaScript files.
+// 4. Set Up Testing Tools:
+// 4.1. Install and configure Vitest for unit testing and test these cases:
+// .1. isActivePath function:
+// 1.1. Returns true when current path matches href exactly
