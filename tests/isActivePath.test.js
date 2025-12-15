@@ -12,4 +12,9 @@ describe("isActivePath", () => {
     expect(isActivePath("/", "/")).toBe(true);
     expect(isActivePath("/index.html", "/")).toBe(true);
   });
+
+  // 3.
+  test("3. Returns true when current path includes the href", () => {
+    expect(isActivePath("/admin/users/1", "/admin/users")).toBe(true);
+  });
 });
