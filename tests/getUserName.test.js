@@ -1,0 +1,17 @@
+import { describe, expect, test, beforeEach } from "vitest";
+import { getUserName } from "../getUserName";
+
+describe("getUserName", () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  test("returns the name from the user object in storage", () => {
+    const user = { name: "Jørgen", id: 1 };
+    localStorage.setItem("user", JSON.stringify(user));
+
+    const result = getUserName();
+
+    expect(result).toBe("Jørgen");
+  });
+});
