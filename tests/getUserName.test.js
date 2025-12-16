@@ -7,11 +7,17 @@ describe("getUserName", () => {
   });
 
   test("returns the name from the user object in storage", () => {
-    const user = { name: "Jørgen", id: 1 };
+    const user = { name: "Jørgen" };
     localStorage.setItem("user", JSON.stringify(user));
 
     const result = getUserName();
 
     expect(result).toBe("Jørgen");
+  });
+
+  test("returns null when no user exists in storage", () => {
+    const result = getUserName();
+
+    expect(result).toBeNull();
   });
 });
